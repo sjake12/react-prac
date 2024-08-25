@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #282d35;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #21222a;
+  height: 90px;
+  padding: 31px 26px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo-img {
+  width: 29px;
+  height: 29px;
+  margin-right: 6.68px;
+}
+
+nav .logo h2 {
+  font-size: 22.25px;
+  color: #61dafb;
+}
+
+nav h3 {
+  color: #fff;
+  font-weight: 400;
+}
+
+main {
+  color: #fff;
+  padding: 0 27px;
+  background: url(./assets/reactjs-icon-2.png);
+  background-repeat: no-repeat;
+  background-position: right 75%;
+}
+
+main h1 {
+  margin-top: 57px;
+  margin-bottom: 46px;
+  font-size: 39px;
+}
+
+main .list {
+  padding-left: 47px;
+}
+
+main .list > * {
+  padding: 10px 0;
+}
+
+main .list > *::marker {
+  color: #61dafb;
+  font-size: 1.4rem;
+}
