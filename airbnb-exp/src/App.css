@@ -63,6 +63,13 @@ nav {
   position: relative;
 }
 
+.card--img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: auto;
+}
+
 .card--badge {
   position: absolute;
   top: 6px;
