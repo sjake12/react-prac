@@ -1,8 +1,16 @@
 import { useState, useRef, useEffect } from "react";
 import "../App.css";
 
-function Item({ name, price, image }) {
+function Item({ name, price, image, onTotalPriceChange }) {
   const [qty, setQty] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(price);
+
+  useEffect(() => {
+    const newTotalPrice = price * qty;
+    setTotalPrice(newTotalPrice);
+
+    onTotalPriceChange(newTotalPrice);
+  }, [qty, price, onTotalPriceChange]);
 
   function handleAdd() {
     setQty((q) => q + 1);
@@ -34,7 +42,7 @@ function Item({ name, price, image }) {
             </button>
           </div>
           <p className="price">
-            $ <span className="total-price">{price * qty}</span>
+            $ <span className="total-price">{totalPrice.toFixed(2)}</span>
           </p>
         </div>
       </div>
